@@ -1,0 +1,317 @@
+/* Adriel Santos Franquet */
+/* RESET Y VARIABLES */
+:root {
+    --color-naranja: #F36B21; 
+    --color-negro: #1A1A1A;
+    --color-gris-claro: #F4F4F4;
+    --color-texto: #333;
+}
+
+/* ===========================
+   CABECERA
+=========================== */
+header {
+    background-color: var(--color-negro);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--color-naranja);
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.logo-texto {
+    color: var(--color-naranja);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-family: "Arial", sans-serif;
+}
+
+nav a:hover, nav a.activo {
+    color: var(--color-naranja);
+}
+
+/* ===========================
+   ESTILOS COMUNES
+=========================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    color: var(--color-negro);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--color-gris-claro);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background-color: var(--color-negro);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: var(--color-naranja);
+}
+
+/* ===========================
+INDEX (INICIO)
+=========================== */
+
+
+.Foto {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    margin-bottom: 40px; 
+}
+
+.Foto-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0; 
+    background-color: #cccccc;
+}
+
+.Foto-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    line-height: normal;
+}
+
+.Foto-overlay h2 {
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.18;
+    margin: 0;
+    text-transform: none; 
+}
+
+/* SECCIÓN INFERIOR DEL INDEX */
+.bottom-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.bottom-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.bottom-left p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.65;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.bottom-right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.bottom-right img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #cccccc;
+}
+
+/* ===========================
+   SOBRE NOSOTROS
+=========================== */
+.nosotros-container {
+    display: flex;
+    gap: 40px;
+}
+
+.nosotros-img {
+    width: 40%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.nosotros-text {
+    width: 60%;
+}
+
+.nosotros-text h3 {
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+}
+
+.logos-sociales-row {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.logos-sociales {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+}
+
+.logos-sociales:hover {
+    transform: scale(1.1);
+}
+
+/* ===========================
+   CURSOS
+=========================== */
+.curso-contenedor {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+    background: white;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.curso-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.curso-info h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.duracion {
+    font-weight: bold;
+    color: var(--color-naranja);
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* ===========================
+   TIENDA
+=========================== */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.productos {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.productos:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.producto-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-naranja);
+    margin: 10px 0;
+    display: block;
+}
+
+/* ===========================
+   CONTACTO
+=========================== */
+.contacto-container {
+    display: flex;
+    gap: 50px;
+}
+
+.contacto-info, .contacto-form {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--color-gris-claro);
+}
+
+.num{
+text-align: center; 
+margin-top: 30px;
+}
